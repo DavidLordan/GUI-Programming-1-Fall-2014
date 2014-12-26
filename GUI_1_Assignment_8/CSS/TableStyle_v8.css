@@ -1,0 +1,350 @@
+@charset "utf-8";
+
+/*
+    File: TableStyle_v8.css
+    91.461 GUI Programming 1, Assignment 8: Form Validation and Dynamic Tabs.
+    David Lordan, UMass Lowell Computer Science, david_lordan@student.uml.edu
+    Alternate email: davidlordan@gmail.com
+    Created on Oct 16, 2014 11:27 AM, updated on November 26th, 2014 6:02 PM
+
+
+    This file applies CSS rules to the site, segmenting the page into three sections,
+    a box for the page's explanation, a box for the form, and the multiplication table itself.
+    
+*/
+
+/* The font 'Lato' was imported from google fonts and is used for the entire page. */
+@import url('http://fonts.googleapis.com/css?family=Lato');
+
+
+/* 'Default' settings for the text and backgrond. */
+body{
+    background-color: #3399ff;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-shadow: 1.5px 1.5px black;
+    height: 100%
+}
+
+/* Styling for the multiplication table.*/
+table{
+    font-size: 1.5em;
+    padding: 3px;
+    text-align: center;
+    text-shadow: 0em 0em #333;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    border-spacing: 1px;
+    background-color: #242B33;
+    box-shadow: 2px 2px 2px black;
+}
+
+/* Styling for the tabs container.*/
+#tabs{
+    margin: 10px;
+    margin-bottom: 45px;
+    margin-right: 25px;
+    position: absolute;
+    margin-right: 30px;
+    left: 300px;
+    text-shadow: none;
+}
+
+/* Styling for the table items. Forces the shape of each cell into an oval. */
+td{
+    width: 90px;
+    height: auto;
+    border-style: solid;
+    border-color: black;
+    border-radius: 25px;
+    border-width: 1px;
+    background-color: white;
+    box-shadow: 2px 2px 2px black;
+}
+
+/* Styling for the validation error messages. */
+#frm label.error{
+    font-size: .8em;
+    color: #f00;
+    display: block;
+    text-align: center;
+    height: 0;
+    margin-left: 10px;
+}
+
+/* Furthur styling for the validation error messages.*/
+#frm input.error, #frm select.error{
+    background-color: #ff0066;
+}
+
+
+/* Rules to force the top left corner of the table to blend into the background of the page. */
+#multiplier td#corner{
+    border-color: #242B33;
+    background-color: #242B33;
+    box-shadow: 0px 0px 0px #242b33;
+}
+
+/*Styling for the 'Remove Tab' button. Adds a tight border radius and adds a blusish color. */
+.removeTab{
+    background-color: black;
+    color: #3399ff;
+    border-radius: 10px;       
+}
+
+/* Hover effect for the Remove Tab button. */
+.removeTab:hover{
+    color: red;
+}
+
+
+/* Special rules for the top row, displaying the multipliers. */
+#multiplier td{
+    border-color: white;
+    border-width: 2px;
+    background-color: black;
+    color: white;
+}
+
+
+/* Applies the same rules of the top row to the far left column, the multiplicands. */
+.multiplicand{
+    border-color: white;
+    border-width: 2px;
+    background-color: black;
+    color: white;
+}
+
+/* Changes the text color to the products, the main content of the table. */
+.products{
+    color: black;
+}
+
+/* To make the table easier to read, a zebra-striping is applied to the rows. */
+tr:nth-child(2n) td:not(.multiplicand){
+    background-color: #ff9966;
+}
+
+/* Contrasting color for every other row. */
+tr:nth-child(2n+1) td:not(.multiplicand){
+    background-color: #99ffff;
+}
+
+
+/*------------------------------------------------------------------*/
+/* Styling for the input boxes, buttons, and checkboxes. */
+#frm{
+    margin-right: 20px;
+    margin-top: 10px;
+    background-color: #242B33;
+    display: inline-block;
+    width:255px;
+    text-align: center;
+    border-style: solid;
+    border-color: white;
+    padding-left:0px;
+    padding-right:20px;
+    padding-bottom:15px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 2px black;
+    float:left;
+}
+
+/* Applies rules for both the ENTER and RESET buttoms, contained in a single div. */
+.buttons{
+    margin-bottom: -16px;
+}
+
+/* Rules for the individual buttons, aligning them within the box. */
+.buttons input{
+    font-size: 1.1em;
+    width: 185px;
+    height: 30px;
+    margin-bottom: 5px;
+    margin-left: 23px;
+    margin-top:5px;
+    background-color:white;
+    font-family: 'Lato', sans-serif;
+    border-width: 1px;
+}
+
+/* Applies shading when hovering over the submit and reset buttons.*/
+.buttons input:hover{
+    background-color:#bbbbff;
+}
+
+#checkBoxes{
+    text-align: left;
+    width:198px;
+    margin-left: 40px;
+
+}
+.chkBox label{
+    display: inline;
+    text-align: left;
+    margin: 20px 5px;
+}
+
+.chkBox {
+    display: inline;
+    text-align: left;
+    margin: 20px 5px;
+}
+
+.remInst{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+#delSelection{
+    margin: 15px;
+}
+
+
+/* Aligns the text inside the form text fields. */
+form input{
+    text-align: center;
+}
+
+form .userInput{
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+form .userInput input{
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+
+/*------------------------------------------------------------------*/
+
+
+
+
+/* Styling for the 'Too Many Tabs' error message or any custom error message not
+   created by the jQuery validation.*/
+
+#userInfo{
+    margin: 30px;
+    width: 220px;
+    margin-left:25px;
+    color:red;
+}
+
+
+/* Font size for the text that is not in the multiplcation table. */
+.Intro p{
+    font-size: 1.2em;
+}
+
+/* Styling for the top box with the page's instructions. '*/
+.Intro{
+    border-style: solid;
+    border-color: white;
+    padding: 10px 25px;
+    background-color: #242B33;
+    box-shadow: 1px 1px 2px black;
+}
+
+/* Styling for the foot, forcing it to the bottom of the page. */
+footer {
+    width:100%;
+    height:25px;
+    position:fixed;
+    bottom:0;
+    left:0;
+    background:#242B33;
+    border-top: solid;
+    border-color: white;
+    border-width: 1px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+/* Stying for the email address link within the footer. */
+a{
+    color:white;
+    text-decoration: none;
+}
+
+
+/*Allows the user to focus on a particular product. */
+tr:nth-child(n+1) td:not(.multiplicand):hover{
+    background-color: #00ff00;
+    color:black;
+}
+
+/* Places the text fields. */
+#Boxes p input{
+    margin: -10px 25px;
+
+}
+
+
+/*------------------------------------------------------------------*/
+/*Overrides much of the CSS provided by the jQuery UI tabs widget. Creates a 
+  custom look to the tabs. */
+.ui-tabs .ui-tabs-panel{
+    padding: 5px;
+}
+
+#tabs .ui-widget-header{
+    background:#242b33;
+    border:none;
+}
+
+#tabs .ui-state-default{
+    border-top-left-radius:  10px;
+    border-top-right-radius: 10px;
+    background: white;
+}
+
+#tabs .ui-state-active{
+    background:#99ffff;
+}
+
+.ui-corner-all{
+    border-radius: 0px;
+}
+
+.ui-corner-bottom{
+    border-radius: 0px;
+}
+#tabs .ui-tabs-anchor{
+    font-size: .7em;
+    color: black;
+}
+#tabs li a{
+    outline: none;
+}
+
+#tabs ul li{
+    outline: none;
+}
+
+#tabs .ui-widget-content{
+    background:#242B33;
+    border:none;
+    padding-top: 2px; 
+}
+
+.ui-tabs{
+    border-style: solid;
+    border-width: 4px;
+    border-color: white;
+    margin-bottom:20px;
+    padding:0px;
+}
+/*------------------------------------------------------------------*/
+
+
+/* Adds red color to tabs selected by a checkbox. */
+.checked a{
+    border-top-left-radius:  10px;
+    border-top-right-radius: 10px;
+    background:red;
+}
