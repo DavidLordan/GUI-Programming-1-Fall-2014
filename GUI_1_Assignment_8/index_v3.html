@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>David Lordan - GUI Programming 1 - Index Page</title>
+        <meta charset="utf-8">
+        <!--File: Index_v2.html
+            File: DavidLordanIndexStyle_v2.css
+            91.461 GUI Programming 1, Assignment 3: Styling Your First Web Page With CSS
+            David Lordan, UMass Lowell Computer Science, david_lordan@student.uml.edu
+            Created on September 18, 2014, Updated on September 23, 2014 3:50 PM. 
+        
+            This is the home-page for my course web-site. Much of the content from the previous
+            version (assignment 2) has been spread out to other pages. -->
+        <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+        <!-- Link to CSS file. -->
+        <link href="css/IndexStyle_v3.css" rel="stylesheet" type="text/css">
+
+    </head>
+
+    <body>
+        <!-- Banner for top of front page which is stylized in the referenced CSS file. -->
+        <div id="header">
+            <h1>David Lordan - Computer Science, UML </h1>
+        </div>  <!-- End of banner div. -->
+
+        <!-- Section for navigation bar, which is used on each page.   -->
+        <div class="navbar">
+            <a href="#home">HOME</a>
+            <a href="#assignments">ASSIGNMENTS</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+
+        <!-- Dynamic content will be placed here by JavaScript. -->
+        <div id="content"></div>
+
+        <!-- The JavaScript code for dynamic behavior. -->
+        <script src="navigation.js"></script>
+
+    </body>
+</html>
+

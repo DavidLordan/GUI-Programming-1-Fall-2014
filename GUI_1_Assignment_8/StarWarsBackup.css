@@ -1,0 +1,144 @@
+/**
+ * Document   : TextStyles-v8.css
+ * Created on : Oct 24, 2010, 4:23:44 PM
+ * Author     : Jesse Heines, heines@cs.uml.edu
+ * Description:
+ *   Styles to accompany FormattingText-vN.html.
+ *
+ * updated by JMH on October 1, 2012 at 9:42 AM
+ * updated by JMH on September 25, 2013 at 9:36 PM
+ * updated by JMH on September 23, 2014 at 11:45 AM to change firefox to Firefox
+ */
+
+/* major header properties */
+
+
+@import url('http://fonts.googleapis.com/css?family=News+Cycle');
+@import url('http://fonts.googleapis.com/css?family=Oswald');
+
+body{
+  font-family: "News Cycle", sans-serif;
+  background-color: black;
+  color: white;
+  margin: 25px;
+  background-image: url(starfield.jpg);
+
+  
+}
+.title {
+  display: inline;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: -35px;
+  font-weight: bold;
+  font-size: 3.5em;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: red ;
+  border: ridge;
+  border-width: 5px;
+  border-color: #DDDDDD;
+  border-radius: 15px;
+
+  text-shadow: -1.5px -1.5px 1.5px #FF6262;
+
+
+  
+
+
+
+
+}
+
+h4{
+  color: #4791FF;
+}
+a{
+  color:white;
+  text-decoration: none;
+}
+a:hover{
+  color: blue;
+  text-decoration: none;
+}
+.title:nth-of-type(2){
+  color: #33AAFF;
+text-shadow: -1.5px -1.5px 1.5px #8888BB;
+}
+
+.title:nth-of-type(3){
+  color: #00FF00;
+text-shadow: -1.5px -1.5px 1.5px #CC5555;
+}
+
+
+
+
+
+.author, .authorsTitle{
+  margin-top: 0px;
+  margin-left: 20px;
+  text-decoration: underline;
+}
+/* author's title header refinement */
+ .author {
+  color: white;
+  margin-bottom: 0px;
+  
+}
+
+.authorsTitle{
+font-size: 1em;
+margin-bottom: -20px;
+
+}
+
+/* minor header properties */
+ .date {
+  color: white ;
+  margin-bottom: -20px;
+  margin-left: 20px;
+}
+
+/* additional minor header refinements */
+ .date {
+  margin-top: 20px ;
+
+}
+
+.text{
+
+border: solid;
+border-radius: 15px;
+margin-top: 30px;
+margin-bottom: 30px;
+padding-left: 10px;
+border-color: #DDDDDD;
+
+  
+}
+
+/* first letter of main text for Safari and Chrome */
+p {
+  font-size: 1.5em;
+  line-height: 1.3em;
+  color: yellow;
+  margin:  10px;
+  padding: 0;
+}
+
+p:nth-of-type(3n){
+  margin-bottom: 4.5em;
+  margin:10px;
+  padding: 0;
+}
+
+/* added by JMH on October 1, 2012 at 9:17 AM */
+/* added by JMH on October 1, 2012 at 9:17 AM */
+#deathstarImage {
+  float: right ;  
+}
+
+
+
+
+

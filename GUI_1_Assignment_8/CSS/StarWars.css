@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+/*
+    File: 
+    91.461 GUI Programming 1, Assignment 5: Formatting Text
+    David Lordan, UMass Lowell Computer Science, david_lordan@student.uml.edu
+    Created on October 5, 2014, Updated on October 6, 2014 10:24 PM
+
+    This is the CSS file used to format the file "StarWarsOpeningCrawl.html", which
+    displays the opening text to each of the original Star Wars films. 
+*/
+
+/* This font was imported from google fonts and is used for the film opening text. */
+@import url('http://fonts.googleapis.com/css?family=News+Cycle');
+
+
+/*
+   Font used for movie titles.
+   Source:;
+   http://www.dafont.com/star-jedi.font*/
+@font-face {
+    font-family: StarWarsFont;
+    src: url(../Fonts/Starjedi.ttf);
+}
+
+
+/* Applies a 'default' setting for all text in the body. Also adds a star field
+   image to the background.
+   Source:
+   http://fc06.deviantart.net/fs70/f/2010/360/4/f/1024x768_star_field_by_nightmaremetropolis-d35qq56.png */
+
+body{
+    font-family: "News Cycle", sans-serif;
+    background-color: black;
+    color: white;
+    margin: 25px;
+    background-image: url(../Images/starfield.jpg);
+
+
+}
+
+
+ /* Simple effects for the pages introductory text.  */
+
+ h1, h3, a{
+    font-family: Helvetica, sans-serif;
+    
+    }
+
+    h4{
+        color: #4791FF;
+    }
+    
+    a{
+        color: white;
+        text-decoration: none;
+    }
+
+    a:visited{
+        color: white;
+    }
+    a:hover{
+        color: blue;
+        text-decoration: none;
+    }
+
+/* Applies effects to the movie titles. Most effects apply to all three titles,
+   but some are unique to each as can be seen below. The text shadow adds a mild
+   embossing effect, the idea for which was taken from the following site:
+   http://www.midwinter-dg.com/permalink-7-great-css-based-text-effects-using-the-text-shadow-property_2011-03-03.html */
+.title {
+    display: inline;
+    font-family: StarWarsFont, sans-serif;
+    margin-bottom: -25px;
+    font-weight: bold;
+    font-size: 3.8em;
+    padding-left: 25px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    color: red ;
+    border: ridge;
+    border-width: 5px;
+    border-color: #DDDDDD;
+    border-radius: 15px;
+
+    text-shadow: -2.5px -2.5px 1.5px yellow;
+
+    white-space: nowrap;
+}
+
+    /* Coloring and embossing effects for "The Empire Strikes Back" */
+    .title:nth-of-type(2){
+        padding-left: 20px;
+        color: #33AAFF;
+        text-shadow: -2.5px -2.5px 1.5px white;
+    }
+
+    /* Coloring and embossing effects for "Return of the Jedi" */
+    .title:nth-of-type(3){
+        padding-left: 20px;
+        color: #00FF00;
+        text-shadow: -2.5px -2.5px 1.5px #CC5555;
+    }
+
+    /* Simple placement and underline effects for author and their title. */
+    .author, .authorsTitle{
+        margin-top: 0px;
+        margin-left: 20px;
+        text-decoration: underline;
+    }
+
+    /* Fine-tuning of the 'author' placement. */
+    .author {
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+
+    /* Fine-tuning of the 'authorTitle' placment and size. A negative margin is used
+       to pull the 'date' div closer. */
+    .authorsTitle{
+        font-size: 1em;
+        margin-bottom: -20px;
+
+    }
+
+    /* Effects to place the 'date' div and change its color. Having the author, author
+     title, and date placed tightly together in white text allows them to stand out
+     slightly within a text-dense page. */
+    .date {
+        font-family: "News Cycle", sans-serif;
+        color: white ;
+        margin-bottom: -20px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    /* Adds a border and some spacing to the main text container. */
+    .text{
+        border: solid;
+        border-radius: 15px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-left: 10px;
+        border-color: #DDDDDD;
+    }
+
+    /* Coloring and sizing for the main text. By default a large padding was being 
+     added to the text, but I couldn't track down where it was from, so it is 
+     reset here. */
+    p {
+        font-size: 1.5em;
+        line-height: 1.3em;
+        color: yellow;
+        margin:  10px;
+        padding: 0;
+    }
+
+    /* Adds some space between the final line of text for each film and the title
+       of the next film.  */
+    p:nth-of-type(3n){
+        margin-bottom: 4.5em;
+        margin:10px;
+        padding: 0;
+    }
+
+    /* Placement and sizing of the Death Star image. */
+    #deathstarImage img{
+        width:155px; 
+        height: auto;
+        float: right;
+    }
