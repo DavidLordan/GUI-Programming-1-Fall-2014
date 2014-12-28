@@ -1,6 +1,7 @@
   <h1>GUI Programming 1, Fall 2014</h1>
  
-
+  This is a collection of my homework assignments for GUI Programming 1 at UMass Lowell from the Fall 2014 semester.
+ 
   <ul>
     <li><a href="http://davidlordan.github.io/GUI-Programming-1-Fall-2014/GUI_1_Assignment_3/Index.html">Assignment 3</a> - Personal webpage.</li>
     <li><a href="http://davidlordan.github.io/GUI-Programming-1-Fall-2014/GUI_1_Assignment_5/StarWarsOpeningCrawl.html">Assignment 5</a> - Formatting JSON text.</li>
