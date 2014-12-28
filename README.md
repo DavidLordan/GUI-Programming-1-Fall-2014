@@ -1,9 +1,4 @@
 
-<!DOCTYPE html>
-<html>
-<title>Hello Strapdown</title>
-
-<xmp theme="Cyborg" style="display:none;">
 
 
   GUI-Programming-1-Fall-2014
@@ -22,7 +17,3 @@
   </ul>
 
 
-</xmp>
-
-<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
-</html>
